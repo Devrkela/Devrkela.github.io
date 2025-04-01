@@ -171,9 +171,6 @@ a{
   text-decoration:none;
 
 }
-nav > ul{
-  
-}
 
 nav > ul > li.active{
   background:#1c3b24;
@@ -187,6 +184,10 @@ nav > ul > li > a{
 nav > ul > li:not(.active):hover{
   background:#3a9e54;
   color:#ffffff;
+}
+
+nav > ul > li{
+  transform:translateX(-110%);
 }
 
 header > section#menu{
@@ -274,7 +275,6 @@ main{
   transform-origin:center;
     transition:transform 500ms ease;
 
-  z-index:10;
 }
 .cards > .card{
   width:100%;
