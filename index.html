@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="/UX.css" rel="stylesheet">
+        <link href="./UX.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+        <svg id="logo" xmlns="http//www.w3.org/2000/svg" viewbox="0 0 10 10">
+            <mask id="cat">
+            <rect x="0" y="0" width="10" height="10" fill="white"></rect>
+
+            <path d="
+                M 5 10
+                A 1.98 1.98 0 0 1 3.3 7
+                A 5 5 0 0 0 3.91 5.6
+                A 0.9 0.9 0 0 1 4.3 5
+                A 0.99 0.99 0 0 1 4.13 3.54
+                A 0.99 0.99 0 0 1 4.25 2.75
+                A 0.99 0.99 0 0 1 4.65 3.17
+                A 0.99 0.99 0 0 1 5 3.1
+                A 0.99 0.99 0 0 1 5.35 3.17
+                A 0.99 0.99 0 0 1 5.75 2.75
+                A 0.99 0.99 0 0 1 5.87 3.54
+                A 0.9 0.9 0 0 1 5.7 5
+                A 1 1 0 0 1 6.09 5.6
+                A 5 5 0 0 0 6.7 7
+                A 1.98 1.98 0 0 1 5 10
+    
+                Z" fill="black" />
+
+            </mask>
+            
+          <circle mask="url(#cat)" fill="context-ill" r="5" cx="5" cy="5"></circle>
+        </svg>
+            <button id="menu_button"><span class="material-symbols-outlined">menu</span></button>
+            <section id="menu">
+                <h4>Que voulez-vous faire?</h4>
+                <nav>
+                    <ul>
+                        <li class="active"><a href=""><span class="material-symbols-outlined">home</span><h6>Aller à l'accueil</h6></a></li>
+                        <li><a href=""><span class="material-symbols-outlined">business_center</span><h6>Entrevoir ce que j'ai à vous offrir</h6></a></li>
+                        <li><a href=""><span class="material-symbols-outlined">newspaper</span><h6>Découvrir mes projets déjà réalisé.</h6></a></li>
+                        <li><a href=""><span class="material-symbols-outlined">call</span><h6>Me contacter</h6></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+        </header>
+
+        <main>
+            <section class="cards_section" style="--total:6">
+                <div class="cards">
+                    <div class="card" style="--position:0"></div>
+                    <div class="card" style="--position:1"></div>
+                    <div class="card" style="--position:2"></div>
+                    <div class="card" style="--position:3"></div>
+                    <div class="card" style="--position:4"></div>
+                    <div class="card" style="--position:5"></div>
+                </div>
+                <div class="nav">
+                    <span class="material-symbols-outlined left"">arrow_left</span>
+                    <span class="material-symbols-outlined right">arrow_right</span>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <button id="ask"><span id="fs" class="material-symbols-outlined">fullscreen</span></button>
+                <div id="test">
+                
+            </div>
+        </footer>
+        <script src="./cpu.js" type="module"></script>
+    </body>
+</html>
