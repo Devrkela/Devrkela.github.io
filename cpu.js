@@ -12,25 +12,15 @@ window.addEventListener("wheel", function(event){
 
 let last;
 
-window.addEventListener("touchstart", function(event){
-  last = event.touches[0].clientY;  
-});
-
-window.addEventListener("touchmove", function(event){
-  const diff = last - event.touches[0].clientY;
-  track += diff;
-  test.innerHTML = track;
-  last = event.touches[0].clientY;
-
-});
-
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
     fs.innerHTML = "fullscreen_exit";
+    fs.nextSibling.textContent = "Fenêtré";
   } else if (document.exitFullscreen) {
     document.exitFullscreen();
     fs.innerHTML = "fullscreen";
+    fs.nextSibling.textContent = "Plein-écran";
   }
 }
 
@@ -40,12 +30,12 @@ let card_angle = 0;
 const left = document.querySelector(".cards_section .left");
 const right = document.querySelector(".cards_section .right");
 
-left.addEventListener("click", function(){
+left.addEventListener("pointerup", function(){
   card_angle = card_angle +(360 / 6);
   document.querySelector(".cards_section > .cards").style.transform = `perspective(1000px) rotateY(${card_angle}deg)`;
 })
 
-right.addEventListener("click", function(){
+right.addEventListener("pointerup", function(){
   card_angle = card_angle - (360 / 6);
 
   document.querySelector(".cards_section > .cards").style.transform = `perspective(1000px) rotateY(${card_angle}deg)`;
