@@ -1,0 +1,104 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="./UX.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+        </header>
+        <aside>
+            <form>
+                <label>
+                    <span class="material-symbols-outlined">
+                        timer
+                    </span>
+                    Durée
+                </label>
+                <section>
+                    <input type="number" placeholder="En minutes"/>
+                </section>
+                <label>
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    Prix
+                </label>
+                <section>
+                    <input type="number" placeholder="En centimes"/>
+                </section>
+                <label>
+                    <span class="material-symbols-outlined">
+                        edit
+                    </span>
+                    Titre
+                </label>
+                <section>
+                    <input type="text" placeholder="128 charactéres"/>
+                </section>
+            </form>
+
+            <form>
+                <label>
+                    <span class="material-symbols-outlined">
+                        image
+                    </span>
+                    Photo
+                </label>
+                <input type="file" />
+                <label>
+                   <span class="material-symbols-outlined">
+                        description
+                    </span>
+                    Description
+                </label>
+                <textarea placeholder="524 charactéres">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum sem
+                </textarea>
+            </form>
+
+            <button id="quitter">
+                <span class="material-symbols-outlined">
+                    close
+                </span>            
+            </button>
+        </aside>
+        <main>
+            <div class="card">
+                <div class="info">
+                    <p class="horaire">
+                        <span class="material-symbols-outlined">
+                            timer
+                        </span>
+                        30 minutes
+                    </p>
+                    <p class="prix">
+                        <span class="material-symbols-outlined">
+                            payments
+                        </span>
+                        23 euros
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="../front/assets/anonyme.jpg"/>                    
+                </div>
+                <h4 class="titre">
+                    Box bop
+                </h4>
+                <span class="outils">
+                    <span class="material-symbols-outlined">
+                        edit
+                    </span>      
+                </span>
+            </div>
+        </main>
+        <footer>
+        </footer>
+        <script src="./cpu.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+*{
+  margin:0;
+  padding:0;
+  position:relative;
+}
+html{
+  --accent-color:#293cef;
+  --second-accent-color:#131e83;
+  font-family:Open Sans;
+}
+html{
+  background:#d9dee6;
+}
+
+main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:100vh;
+  width:100vw;
+  flex-direction:column;
+}
