@@ -1,0 +1,30 @@
+{
+  "id":1,
+  "version": 1,
+  "databaseNames": [
+    "exercices"
+  ],
+  "databases": {
+    "exercices": {
+      "version": 1,
+      "objectStoreNames": [
+        "weights_list",
+        "machines"
+      ],
+      "objectstores": {
+        "weights_list": {
+          "keyPath": "id",
+          "indexNames": [],
+          "index": {},
+          "populate": "/db/weights_list.json"
+        },
+        "machines": {
+          "keyPath": "id",
+          "indexNames": [],
+          "index": {},
+          "populate": "/db/machines.json"
+        }
+      }
+    }
+  }
+}

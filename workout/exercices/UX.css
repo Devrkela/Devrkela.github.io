@@ -1,0 +1,343 @@
+*{
+    padding:0;
+    margin:0;
+    position:relative;
+    color:white;
+    overflow:hidden;
+
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:#15191e;
+    overflow-x:hidden;
+    overflow-y:overlay;
+    font-family:Open Sans;
+}
+
+header{
+    width:100vw;
+    height:4rem;
+    padding:0.5rem;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+}
+
+header > button{
+    width:3rem; height:3rem;
+    background:transparent;
+    border:2px solid white;
+    border-radius:1rem;
+    color:white;
+    cursor:pointer;
+}
+
+.assets{
+    display:none;
+}
+
+svg{
+    width:48px;
+}
+
+main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-sizing:border-box;
+    transform:translateX(-100v);
+    margin-bottom:2rem;
+
+    transition:transform 250ms ease;
+}
+
+button{
+    padding:1rem;
+    background:transparent;
+    border: 2px solid white;
+    border-radius:1rem;
+
+    width:max-content;
+    font-family:Open Sans;
+    letter-spacing:0.04rem;
+
+    cursor:pointer;
+}
+
+
+
+h3{
+    margin-bottom:2rem;
+}
+
+
+h3{
+    font-family:EB Garamond;
+    font-weight:800;
+    letter-spacing:0.05rem;
+    border-bottom:2px dashed white;
+    height:1.5rem;
+    overflow:visible;
+}
+
+main > * {
+    width:max-content;
+}
+
+main > modal{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    background:#15191e;
+    top:0;
+
+    z-index:10;
+}
+main > modal  header{
+    height:4rem;
+}
+main > modal  header > button{
+    border:none;   
+    padding:0;
+}
+
+main > modal > .content{
+    max-width:360px;
+    display:flex;
+    flex-direction:column;
+        justify-content:center;
+
+}
+
+main > modal{
+    display:flex;
+    align-items:center;
+}
+main > modal  .name{
+    width:100%;
+    font-size:1.5rem;
+    background:transparent;
+    color:white;
+    border:none;
+    resize:none;
+    caret-color:#ffcb00;
+      outline: none;
+
+}
+
+main > modal  .name:focus{
+    border:none;
+}
+main > modal  .name::placeholder{
+    color:#ffffff9c;
+}
+
+main > modal h4{
+    margin-top:2rem;
+}
+
+li:first-of-type{
+    margin-top:0;
+}
+
+li {
+    margin-top:1rem;
+}
+
+li:last-child {
+    margin-bottom:1rem;
+}
+
+.split{
+    display:flex;
+    font-family:EB Garamond;
+    justify-content:space-between;
+    padding:1.5rem;
+    background:#1b222b;
+    border-radius:1rem;
+    border:1px solid #2c405a;
+    text-decoration:none;
+    align-items:center;
+    font-weight:700;
+    letter-spacing:0.03rem;
+}
+
+.split > input[type="text"]{
+    font-family:EB Garamond;
+    font-size:1.2rem;
+    font-weight:500;
+}
+
+.content ul {
+    margin-top:1rem;
+    height:14rem;
+    overflow-y:scroll;
+}
+.split > div{
+    font-size:0.8rem;
+    color:#ffcb00;
+    font-weight:400;
+    font-family:Open Sans;
+    letter-spacing:0.01rem;
+
+}
+
+.content > div{
+    display:flex;
+    flex-direction:column;
+}
+
+#add_split{
+    align-self:center;
+    border-width:1px;
+    width:100%;
+    border-color:#96bbf5;
+    color:#96bbf5;
+    border-radius:100vmax;
+    font-weight:600;
+    font-variant:petite-caps;
+    font-size:1rem;
+    margin-top:2rem;
+}
+
+#add_workout{
+    align-self:center;
+    width:100%;
+    border:none;
+    border-radius:100vmax;
+    font-weight:600;
+    font-variant:petite-caps;
+    font-size:1rem; 
+    background:#00549d;
+    margin-top:4rem;
+    position:fixed;
+    max-width:360px;
+    bottom: 1rem;
+}
+
+.split{
+    flex-direction:column;
+    align-items:start;
+    gap:0.5rem;
+}
+.split > .xp,.split > .level{
+    display:flex;
+    gap:0.5rem;
+    color:white;
+    flex-direction:column;
+    margin-left:1rem;
+    border:1px solid #2c405a;
+    padding:1rem;
+    width:80%;
+}
+
+.type{
+    color:#ffffff99;
+    font-family:Open Sans;
+    font-weight:600;
+    font-variant:all-petite-caps;
+    letter-spacing:0.05rem;
+    font-size:0.8rem;
+    display:flex;
+    flex-direction:column;
+    margin-left:1rem;
+}
+
+.type > select{
+    margin-top:0.5rem;
+    background:transparent;
+    letter-spacing:0.05rem;
+    width:max-content;
+    background:#20202b;
+    border:1px solid #2c405a;
+    padding:0.5rem;
+    
+    outline:none !important;
+}
+
+.type > select > option:checked{
+    background:#1b222b;
+    font-weight:600;
+}
+
+.type_serie{
+    display:flex;
+    gap:0.5rem;
+}
+.xp > legend, .level > legend{
+    margin:0;
+    color:#ffffff99;
+    font-family:Open Sans;
+    font-weight:600;
+    font-variant:all-petite-caps;
+    letter-spacing:0.05rem;
+    font-size:0.8rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+
+}
+
+.number > input{
+    width:2rem;
+    padding:0.2rem;
+    border:none;
+    background:transparent;
+
+    color:white;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+
+    box-sizing:border-box;
+}
+
+input{
+    outline:none !important;
+
+}
+
+.type_serie{
+}
+.type_serie > input{
+    display:none;
+}
+.type_serie > label{
+    border:1px solid white;
+    padding:0.5rem;
+    font-size:0.8rem;
+    font-family:Open Sans;
+    font-weight:400;
+    letter-spacing:0.04rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+}
+.type_serie > input:checked + label{
+    border-color:#ffcb00;
+    color:#ffcb00;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.series{
+        margin-top:0.5rem;
+
+    display:flex;
+    gap:0.5rem;
+    align-items:center;
+}
+
+.series > input{
+    width:3.5rem;
+    background:#20202b;
+    border:1px solid #2c405a;
+    padding:0.5rem;
+}

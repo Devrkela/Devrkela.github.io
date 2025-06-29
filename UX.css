@@ -1,0 +1,176 @@
+*{
+    padding:0;
+    margin:0;
+    position:relative;
+    color:white;
+    overflow:hidden;
+
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:#15191e;
+    overflow-x:hidden;
+    overflow-y:overlay;
+    font-family:Open Sans;
+}
+
+header{
+    width:100vw;
+    height:4rem;
+    padding:0.5rem;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:space-between;
+}
+
+header > button{
+    width:3rem; height:3rem;
+    background:transparent;
+    border:2px solid white;
+    border-radius:1rem;
+    color:white;
+    cursor:pointer;
+}
+
+.assets{
+    display:none;
+}
+
+svg{
+    width:48px;
+}
+
+main{
+    display:flex;
+    justify-content:center;
+    width:500vw;
+    box-sizing:border-box;
+    transform:translateX(-100v);
+    margin-bottom:2rem;
+
+    transition:transform 250ms ease;
+}
+
+main > section{
+    width:100vw;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.exercice{
+    max-width:320px;
+    background:#232932;
+    padding:1.5rem;
+    border-radius:50vmax;
+    display:grid;
+    grid-template-columns:minmax(auto, 272px) 48px;
+    gap:1rem;
+    width:90%;
+    margin-top:1rem;
+    align-items:center;
+}
+
+.level, .xp{
+    display:flex;
+    align-items:center;
+    gap:0.2rem;
+}
+
+.level > span, .xp > span{
+    font-weight:300;   
+}
+
+.level, .xp,.level > span, .xp > span{
+     color:#ffffff7a;   
+}
+
+span.material-symbols-outlined{
+    font-weight:300;
+}
+
+.info{
+    grid-column:1/2;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    font-size:0.8rem;
+}
+
+.bar{
+    background:#161b23;
+    width:100%;
+    height:0.5rem;
+}
+
+.thumb{
+    width:30%;
+    height:100%;
+    background:#247cea;
+}
+
+h3{
+    margin-bottom:2rem;
+}
+
+.titre{
+    width:100%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+.edit_exercice{
+    grid-column:2/3;
+    grid-row:1/3;
+    background:transparent;
+    aspect-ratio:1/1;
+    width:2rem;
+    border:1px dashed #ffffff;
+    border-radius:50%;
+    justify-self:center;
+}
+
+.general{
+    width:12rem;
+}
+
+.edit_exercice > span{
+    font-size:1.1rem;
+    color:white;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    display:flex;
+    justify-content:space-between;
+    width:100vw;
+    padding:1rem;
+    box-sizing:border-box;
+}
+
+footer > button{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    border:none;
+    background:#247cea;
+    box-shadow:0px 2px 8px 0px #0d1422bf;
+    cursor:pointer;
+}
+
+h4{
+    font-family:EB Garamond;
+    font-weight:500;
+}
+
+h3{
+    font-family:EB Garamond;
+    font-weight:800;
+    letter-spacing:0.05rem;
+    border-bottom:2px dashed white;
+    height:1.5rem;
+    overflow:visible;
+}
