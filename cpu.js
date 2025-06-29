@@ -102,4 +102,3 @@ installButton.addEventListener("click", async () => {
   installButton.setAttribute("hidden", "");
 });
 
-document.body.innerHTML = "test"
