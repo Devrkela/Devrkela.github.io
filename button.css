@@ -1,0 +1,611 @@
+html{
+      background:lch(var(--color-surface));
+  /**** Boutons ****/
+    /*** Size ***/
+      /** Global **/
+      --button-minimum-height:48px;
+
+      /** XS **/
+      --button-xs-padding   :12px;
+      --button-xs-height    :32px;
+      --button-xs-gap       :4px;
+      --button-xs-icon-size :20px;
+  
+      /** S **/
+      --button-s-padding:16px;
+      --button-s-height :40px;
+      --button-s-gap    :8px;
+      --button-s-icon-size :20px;
+  
+      /** M **/
+      --button-m-padding  :24px;
+      --button-m-height   :56px;
+      --button-m-gap      :8px;
+      --button-m-icon-size:20px;
+
+      /** L **/
+      --button-l-padding  :48px;
+      --button-l-height   :96px;
+      --button-l-gap      :12px;
+      --button-l-icon-size:32px;
+  
+      /** XL **/
+      --button-xl-padding  :64px;
+      --button-xl-height   :136px;
+      --button-xl-gap      :16px;
+      --button-xl-icon-size:40px;
+
+      /** Shape **/      
+      --button-xs-square:12px;
+      --button-s-square:12px;
+      --button-m-square:16px;
+      --button-l-square:28px;
+      --button-xl-square:28px;
+
+      --button-xs-round:calc(var(--button-xs-height) / 2);
+      --button-s-round:calc(var(--button-s-height) / 2);
+      --button-m-round:calc(var(--button-m-height) / 2);
+      --button-l-round:calc(var(--button-l-height) / 2);
+      --button-xl-round:calc(var(--button-xl-height) / 2);
+
+      --button-xs-pressed:8px;
+      --button-s-pressed:8px;
+      --button-m-pressed:12px;
+      --button-l-pressed:16px;
+      --button-xl-pressed:16px;
+}
+
+button > .decoration{
+      box-sizing:content-box;
+      overflow:hidden;
+      position:relative;
+      width:inherit;
+}
+
+button{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:max-content;
+      cursor:pointer;
+      position:relative;
+      box-sizing:border-box;
+
+      background:none;
+      border:none;
+      padding-top:0;
+      padding-bottom:0;
+      outline-width:0px;
+      outline-offset:4px;
+      outline-style:solid;
+      outline-color:lch(var(--color-primary));
+}
+
+button, button > .decoration{
+      transition:border-radius 250ms ease;
+}
+
+button > .decoration, button > .hovered, button  > .decoration > .pressed{
+      position:absolute;
+      border-radius:inherit;
+      content:"";
+      width:100%;
+      height:100%;
+      z-index:-1;
+      top:0;
+      left:0;
+      box-sizing:border-box;
+      pointer-events:none;
+      border-radius:inherit;
+}
+
+button > .hovered, button  > .decoration > .pressed{
+      z-index:1000 !important;
+}
+
+button  > .decoration > .pressed{
+      filter:blur(1px);
+      display:flex;
+      transform:scale(0);
+      transform-origin:center center;
+      opacity:1;
+      transition:
+            transform 500ms ease,
+            opacity 250ms 250ms ease;
+}
+
+
+button.xs{
+      border-width:1px;
+      padding-left:var(--button-xs-padding);
+      padding-right:var(--button-xs-padding);
+      height:var(--button-minimum-height);
+      gap:var(--button-xs-gap);
+      border-radius:var(--button-xs-square);
+      
+      font:var(--font-body-medium);
+      letter-spacing:var(--font-body-medium-letter-spacing);
+      font-weight:var(--font-emphasize-font-weight);
+}
+
+button.xs > .icon{
+      width:var(--button-xs-icon-size);
+      font-size:var(--button-xs-icon-size);
+}
+
+button.xs > .decoration, button.xs > .hovered{
+      background:none;
+      content:"";
+      width:100%;
+      top:8px;
+      left:0;
+      position:absolute;
+      z-index:-1;
+
+      height:var(--button-xs-height);  
+}
+
+button.xs.round{
+      border-radius:var(--button-xs-round);
+}
+
+
+button:not(.xs):not(.m):not(.l):not(.xl){
+      border-width:1px;
+      background:none;
+      padding-left:var(--button-s-padding);
+      padding-right:var(--button-s-padding);
+      height:var(--button-minimum-height);
+      gap:var(--button-s-gap);
+      border-radius:var(--button-s-square);
+
+      font:var(--font-body-medium);
+      letter-spacing:var(--font-body-medium-letter-spacing);
+      font-weight:var(--font-emphasize-font-weight);
+}
+button:not(.xs):not(.m):not(.l):not(.xl) > .icon{
+      width:var(--button-s-icon-size);
+      font-size:var(--button-s-icon-size);
+}
+
+button:not(.xs):not(.m):not(.l):not(.xl) > .decoration, button:not(.xs):not(.m):not(.l):not(.xl) > .hovered{
+      content:"";
+      width:100%;
+      top:4px;
+      left:0;
+      position:absolute;
+      z-index:-1;
+     
+      height:var(--button-s-height);   
+}
+
+button.round:not(.xs):not(.m):not(.l):not(.xl){
+      border-radius:var(--button-s-round);    
+}
+
+button.m{
+      border-width:1px;
+      padding-left:var(--button-m-padding);
+      padding-right:var(--button-m-padding);
+      height:var(--button-m-height);
+      border-radius:var(--button-m-square);
+      gap:var(--button-m-gap);
+
+      font:var(--font-body-large);
+      letter-spacing:var(--font-body-large-letter-spacing);
+      font-weight:var(--font-emphasize-font-weight);
+}
+
+button.m > .icon{
+      width:var(--button-m-icon-size);
+      font-size:var(--button-m-icon-size);   
+}
+
+button.m.round{
+      border-radius:var(--button-m-round);    
+}
+
+button.l{
+      border-width:2px;
+      padding-left:var(--button-l-padding);
+      padding-right:var(--button-l-padding);
+      height:var(--button-l-height);
+      border-radius:var(--button-l-square);
+      gap:var(--button-l-gap);
+      font:var(--font-headline-small);
+      letter-spacing:var(--font-headline-small-letter-spacing);
+}
+
+button.l > .icon{
+      width:var(--button-l-icon-size);
+      font-size:var(--button-l-icon-size);   
+}
+
+button.l.round{
+      border-radius:var(--button-l-round);
+}
+
+button.xl{
+      border-width:3px;
+      padding-left:var(--button-xl-padding);
+      padding-right:var(--button-xl-padding);
+      height:var(--button-xl-height);
+      border-radius:var(--button-xl-square);
+      gap:var(--button-xl-gap);
+
+      font:var(--font-headline-large );
+      letter-spacing:var(--font-headline-large-letter-spacing);
+}
+
+button.xl > .icon{
+      width:var(--button-xl-icon-size);
+      font-size:var(--button-xl-icon-size);   
+}
+
+button.xl.round{
+      border-radius:var(--button-xl-round);
+}
+
+button, button > .decoration{
+    
+}
+
+/*** Color ***/
+      /** Text **/
+            button{
+                  color:lch(var(--color-primary));
+            }
+            
+            button > .icon{
+                  color:lch(var(--color-primary));
+                  fill: lch(var(--color-primary));
+            }
+
+            button  > .decoration > .pressed{
+                  border-radius:50%;
+            }
+
+            /** Disabled state **/
+            button[aria-disabled=true] > .decoration{
+                  background:lch(var(--color-on-surface)/0.1);
+            }
+
+            button[aria-disabled=true], button[aria-disabled=true] > .icon{
+                  color: lch(var(--color-on-surface)/0.38);
+                  fill: lch(var(--color-on-surface)/0.38);
+            }
+
+            /** Hover state **/
+            button:hover > .hovered{
+                  background:lch(var(--color-primary)/0.08);
+            }
+
+            button:hover, button:hover > .icon{
+                  color:lch(var(--color-primary));  
+            }
+
+            /** Pressed State **/
+            button  > .decoration > .pressed{
+                  background:lch(var(--color-primary)/0.1);
+            }
+
+      /** Elevated **/
+            /** Normal state **/
+            button.elevated > .decoration{
+                  background:lch(var(--color-surface-container));
+                  box-shadow:0px 1px 2px 0px lch(var(--color-shadow)/.3);
+            }
+
+            button.elevated, button.elevated > .icon{
+                  color:lch(var(--color-primary));
+                  fill:lch(var(--color-primary));
+            }
+
+            button.elevated[aria-pressed=false] > .decoration{
+                  background:lch(var(--color-surface-container));
+            }
+            
+            button.elevated[aria-pressed=false], button.elevated[aria-pressed=false] > .icon{
+                  color:lch(var(--color-primary));
+                  fill:lch(var(--color-primary));
+            }
+
+            button.elevated[aria-pressed=true] > .decoration{
+                  background:lch(var(--color-primary));
+            }
+            
+            button.elevated[aria-pressed=true], button.elevated[aria-pressed=true] > .icon{
+                  color:lch(var(--color-on-primary));
+                  fill:lch(var(--color-on-primary));
+            }
+
+            /** Disabled state **/
+            button.elevated[aria-disabled=true] > .decoration{
+                  background:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.elevated[aria-disabled=true], button.elevated[aria-disabled=true] > .icon{
+                  color: lch(var(--color-on-surface)/0.38);
+                  fill: lch(var(--color-on-surface)/0.38);
+            }
+
+            /** Hover state **/
+            button.elevated:hover > .hovered{
+                  background:lch(var(--color-primary)/0.1);
+            }
+
+            button.elevated[aria-pressed=false]:hover > .hovered{
+                  background:lch(var(--color-primary)/0.1);
+            }
+
+            button.elevated[aria-pressed=true]:hover > .hovered{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+
+            button.elevated:hover, button.elevated:hover > .icon{
+                  color:lch(var(--color-primary));  
+            }
+
+            button.elevated[aria-pressed=false]:hover, button.elevated[aria-pressed=false]:hover > .icon{
+                  color:lch(var(--color-primary));
+            }
+
+            button.elevated[aria-pressed=true]:hover, button.elevated[aria-pressed=true]:hover > .icon{
+                  color:lch(var(--color-on-primary));
+            }
+
+            /** Pressed State **/
+            button.elevated  > .decoration > .pressed{
+                  background:lch(var(--color-primary)/0.1);
+            }
+
+            button.elevated[aria-pressed="false"]  > .decoration > .pressed{
+                  background:lch(var(--color-primary)/0.1);
+            }
+
+            button.elevated[aria-pressed="true"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+      /** Tonal **/
+            /** Normal state **/
+            button.tonal > .decoration{
+                  background:lch(var(--color-secondary-container));
+            }
+
+            button.tonal, button.tonal > .icon{
+                  color:lch(var(--color-on-secondary-container));
+                  fill:lch(var(--color-on-secondary-container));
+            }
+
+            button.tonal[aria-pressed=false] > .decoration{
+                  background:lch(var(--color-secondary-container));
+            }
+            
+            button.tonal[aria-pressed=false], button.tonal[aria-pressed=false] > .icon{
+                  color:lch(var(--color-on-secondary-container));
+                  fill:lch(var(--color-on-secondary-container));
+            }
+
+            button.tonal[aria-pressed=true] > .decoration{
+                  background:lch(var(--color-secondary));
+            }
+            
+            button.tonal[aria-pressed=true], button.tonal[aria-pressed=true] > .icon{
+                  color:lch(var(--color-on-secondary));
+                  fill:lch(var(--color-on-secondary));
+            }
+
+            /** Disabled state **/
+            button.tonal[aria-disabled=true] > .decoration{
+                  background:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.tonal[aria-disabled=true], button.tonal[aria-disabled=true] > .icon{
+                  color: lch(var(--color-on-surface)/0.38);
+                  fill: lch(var(--color-on-surface)/0.38);
+            }
+
+            /** Hover state **/
+            button.tonal:hover > .hovered{
+                  background:lch(var(--color-on-secondary-container)/0.1);
+            }
+
+            button.tonal[aria-pressed=false]:hover > .hovered{
+                  background:lch(var(--color-on-secondary-container)/0.1);
+            }
+
+            button.tonal[aria-pressed=true]:hover > .hovered{
+                  background:lch(var(--color-on-secondary)/0.1);
+            }
+
+            button.tonal:hover, button.tonal:hover > .icon{
+                  color:lch(var(--color-on-secondary-container));  
+            }
+
+            button.tonal[aria-pressed=false]:hover, button.tonal[aria-pressed=false]:hover > .icon{
+                  color:lch(var(--color-on-secondary-container));  
+            }
+
+            button.tonal[aria-pressed=true]:hover, button.tonal[aria-pressed=true]:hover > .icon{
+                  color:lch(var(--color-on-secondary));  
+            }
+
+            /** Pressed State **/
+            button.tonal  > .decoration > .pressed{
+                  background:lch(var(--color-on-secondary-container)/0.1);
+            }
+
+            button.tonal[aria-pressed="false"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-secondary-container)/0.1);
+            }
+
+            button.tonal[aria-pressed="true"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-secondary)/0.1);
+            }
+
+      /** Outline **/
+            /** Normal state **/
+            button.outlined > .decoration{
+                  background:none;
+                  border-style: var(--outline-style);
+                  border-color: var(--color-outline-variant);
+            }
+
+            button.outlined, button.outlined > .icon{
+                  color:lch(var(--color-on-surface-variant));
+                  fill:lch(var(--color-on-surface-variant));
+            }
+            
+            button.outlined[aria-pressed=false], button.outlined[aria-pressed=false] > .icon{
+                  color:lch(var(--color-on-surface-variant));
+                  fill:lch(var(--color-on-surface-variant));
+            }
+
+            button.outlined[aria-pressed=true] > .decoration{
+                  border-width: var(--outline-width);
+                  border-style: var(--outline-style);
+                  background: lch(var(--color-inverse-surface));
+            }
+            
+            button.outlined[aria-pressed=true], button.outlined[aria-pressed=true] > .icon{
+                  color:lch(var(--color-inverse-on-surface));
+                  fill:lch(var(--color-inverse-on-surface));
+            }
+
+            /** Disabled state **/
+            button.outlined[aria-disabled=true] > .decoration{
+                  border-color:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.outlined[aria-disabled=true][aria-pressed="false"] > .decoration{
+                  border-color:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.outlined[aria-disabled=true][aria-pressed="true"] > .decoration{
+                  background:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.outlined[aria-disabled=true], button.outlined[aria-disabled=true] > .icon{
+                  color: lch(var(--color-on-surface)/0.38);
+                  fill: lch(var(--color-on-surface)/0.38);
+            }
+
+            /** Hover state **/
+            button.outlined:hover > .hovered{
+                  border-color:var(--color-outline-variant);
+                  background:lch(var(--color-on-surface-variant)/0.08);
+            }
+
+            button.outlined:hover, button.outlined:hover > .icon{
+                  color:lch(var(--color-on-surface-variant));  
+            }
+
+            button.outlined[aria-pressed=false]:hover > .hovered{
+                  background:lch(var(--color-on-surface-variant)/0.08);
+            }
+
+            button.outlined[aria-pressed=false]:hover, button.outlined[aria-pressed=false]:hover > .icon{
+                  color:lch(var(--color-on-surface-variant));  
+            }
+
+            button.outlined[aria-pressed=true]:hover > .hovered{
+                  background:lch(var(--color-inverse-on-surface)/0.08);
+            }
+
+            button.outlined[aria-pressed=true]:hover, button.outlined[aria-pressed=true]:hover > .icon{
+                  color:lch(var(--color-inverse-on-surface));  
+            }
+
+            /** Pressed State **/
+            button.outlined  > .decoration > .pressed{
+                  background:lch(var(--color-on-surface-variant)/0.1);
+            }
+
+            button.outlined[aria-pressed="false"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-surface-variant)/0.1);
+            }
+
+            button.outlined[aria-pressed="true"]  > .decoration > .pressed{
+                  background:lch(var(--color-inverse-on-surface)/0.1);
+            }
+      /** Filled **/
+            /** Normal state **/
+            button.filled > .decoration{
+                  background:lch(var(--color-primary));
+            }
+            
+            button.filled, button.filled > .icon{
+                  color:lch(var(--color-on-primary));
+                  fill:lch(var(--color-on-primary));
+            }
+
+            button.filled[aria-pressed=false] > .decoration{
+                  background:lch(var(--color-surface-container));
+            }
+            
+            button.filled[aria-pressed=false], button.filled[aria-pressed=false] > .icon{
+                  color:lch(var(--color-on-surface-variant));
+                  fill:lch(var(--color-on-surface-variant));
+            }
+
+            button.filled[aria-pressed=true] > .decoration{
+                  background:lch(var(--color-primary));
+            }
+            
+             button.filled[aria-pressed=true], button.filled[aria-pressed=true] > .icon{
+                  color:lch(var(--color-on-primary));
+                  fill:lch(var(--color-on-primary));
+            }
+
+            /** Disabled state **/
+            button.filled[aria-disabled=true] > .decoration{
+                  background:lch(var(--color-on-surface)/0.1);
+            }
+
+            button.filled[aria-disabled=true], button.filled[aria-disabled=true] > .icon{
+                  color: lch(var(--color-on-surface)/0.38);
+                  fill: lch(var(--color-on-surface)/0.38);
+            }
+
+            /** Hover state **/
+            button.filled:hover > .hovered{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+
+            button.filled[aria-pressed=false]:hover > .hovered{
+                  background:lch(var(--color-on-surface-variant)/0.1);
+            }
+
+            button.filled[aria-pressed=true]:hover > .hovered{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+
+            button.filled:hover, button.filled:hover > .icon{
+                  color:lch(var(--color-on-primary));  
+            }
+
+            button.filled[aria-pressed=false]:hover, button.filled[aria-pressed=false]:hover > .icon{
+                  color:lch(var(--color-on-surface-variant));
+            }
+
+            button.filled[aria-pressed=true]:hover, button.filled[aria-pressed=true]:hover > .icon{
+                  color:lch(var(--color-on-primary));
+            }
+
+            /** Pressed State **/
+            button.filled  > .decoration > .pressed{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+
+            button.filled[aria-pressed="false"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-surface-variant)/0.1);
+            }
+
+            button.filled[aria-pressed="true"]  > .decoration > .pressed{
+                  background:lch(var(--color-on-primary)/0.1);
+            }
+
+#change_color{
+      position:fixed;
+      left:0;
+}
