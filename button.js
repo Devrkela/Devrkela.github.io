@@ -24,5 +24,7 @@ for(let button of document.querySelectorAll("button")){
       pressed_element.style.transform = "scale(1)";
       pressed_element.style.opacity = 0;
     }
+
+    this.blur();
   });
 }
