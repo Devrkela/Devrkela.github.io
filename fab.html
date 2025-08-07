@@ -1,104 +1,80 @@
 <!DOCTYPE>
 <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=edit" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="./general.css" rel="stylesheet">
     <link href="./shadow.css" rel="stylesheet">
     <link href="./button.css" rel="stylesheet">
+    <link href="./fab.css" rel="stylesheet">
   </head>
   <body>
-    <button class="xs elevated"">
+    <button class="fab tonal primary s">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      <span class="icon material-symbols-outlined">
-        edit
+      <span class="material-symbols-outlined icon">
+          edit
       </span>
-      elevated
+      compose
     </button>
-    <button class="filled">
+    <button class="fab tonal secondary m">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      <span class="icon material-symbols-outlined">
-        edit
+      <span class="material-symbols-outlined icon">
+          edit
       </span>
-      filled
+      compose
     </button>
-    <button class="m tonal">
+    <button class="fab tonal tertiary l">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      <span class="icon material-symbols-outlined">
-        edit
+      <span class="material-symbols-outlined icon">
+          edit
       </span>
-      tonal
+      compose
     </button>
-    <button class="l outlined">
+    <hr>
+    <button class="fab primary s">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      <span class="icon material-symbols-outlined">
-        edit
+      <span class="material-symbols-outlined icon">
+          edit
       </span>
-      outlined
+      compose
     </button>
-    <button class="xl">
+    <button class="fab secondary m">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      <span class="icon material-symbols-outlined">
-        edit
+      <span class="material-symbols-outlined icon">
+          edit
       </span>
-      text
+      compose
     </button>
-
-    <button class="xs round elevated">
+    <button class="fab tertiary l">
       <div aria-hidden="true" class="decoration">
         <div aria-hidden="true" class="pressed"></div>
       </div>
       <div aria-hidden="true" class="hovered"></div>
-      elevated
-    </button>
-    <button class="round filled">
-      <div aria-hidden="true" class="decoration">
-        <div aria-hidden="true" class="pressed"></div>
-      </div>
-      <div aria-hidden="true" class="hovered"></div>
-      filled
-    </button>
-    <button class="m  round tonal">
-      <div aria-hidden="true" class="decoration">
-        <div aria-hidden="true" class="pressed"></div>
-      </div>
-      <div aria-hidden="true" class="hovered"></div>
-      tonal
-    </button>
-    <button class="l  round outlined">
-      <div aria-hidden="true" class="decoration">
-        <div aria-hidden="true" class="pressed"></div>
-      </div>
-      <div aria-hidden="true" class="hovered"></div>
-      outlined
-    </button>
-    <button class="xl round">
-      <div aria-hidden="true" class="decoration">
-        <div aria-hidden="true" class="pressed"></div>
-      </div>
-      <div aria-hidden="true" class="hovered"></div>
-      text
+      <span class="material-symbols-outlined icon">
+          edit
+      </span>
+      compose
     </button>
     <input id="change_color" type="range" min="0" max="360" step="1" value="100"/>
-    <script src="./color.js"></script>
+    <script src="/composants/color.js"></script>
     <script src="./button.js"></script>
+    <script src="./fab.js"></script>
   </body>
 </html>

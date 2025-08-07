@@ -1,0 +1,239 @@
+html{
+      /**** FAB ****/
+            /*** Size ***/
+            --fab-s-min-width:      56px;
+            --fab-s-height:         56px;
+            --fab-s-icon-size:      24px;
+            --fab-s-leading-space:  16px;
+            --fab-s-gap-space:       8px;
+            --fab-s-trailing-space: 16px;
+            --fab-s-border-radius:  16px;
+
+            --font-s : var(--font-s-font-weight) var(--font-s-font-size)/var(--font-s-line-height) var(--font-s-font-family);
+            --font-s-font-weight: 500;
+            --font-s-font-size:   16px;
+            --font-s-line-height: 24px;
+            --font-s-font-family: Inter;
+            --font-s-tracking:    0.15px;
+      
+            --fab-m-min-width:      80px;
+            --fab-m-height:         80px;
+            --fab-m-icon-size:      28px;
+            --fab-m-leading-space:  26px;
+            --fab-m-gap-space:      12px;
+            --fab-m-trailing-space: 26px;
+            --fab-m-border-radius:  20px;
+
+            --font-m : var(--font-m-font-weight) var(--font-m-font-size)/var(--font-m-line-height) var(--font-m-font-family);
+            --font-m-font-weight: 400;
+            --font-m-font-size:   22px;
+            --font-m-line-height: 28px;
+            --font-m-font-family: Inter;
+            --font-m-tracking:    0px;
+
+            --fab-l-min-width:      96px;
+            --fab-l-height:         96px;
+            --fab-l-icon-size:      36px;
+            --fab-l-leading-space:  28px;
+            --fab-l-gap-space:      16px;
+            --fab-l-trailing-space: 28px;
+            --fab-l-border-radius:  28px;
+
+            --font-l : var(--font-l-font-weight) var(--font-l-font-size)/var(--font-l-line-height) var(--font-l-font-family);
+            --font-l-font-weight: 400;
+            --font-l-font-size:   24px;
+            --font-l-line-height: 32px;
+            --font-l-font-family: Inter;
+            --font-l-tracking:    0px;
+}
+
+button.fab, button:active{
+      box-shadow:
+            var(--shadow-umbra-3) lch(var(--color-shadow)/0.2),
+            var(--shadow-penumbra-3) lch(var(--color-shadow)/0.14),
+            var(--shadow-ambient-3) lch(var(--color-shadow)/0.12);
+}
+
+button.fab:hover{
+      box-shadow:
+            var(--shadow-umbra-4) lch(var(--color-shadow)/0.2),
+            var(--shadow-penumbra-4) lch(var(--color-shadow)/0.14),
+            var(--shadow-ambient-4) lch(var(--color-shadow)/0.12);   
+}
+
+button.fab:not(.xs):not(.m):not(.l):not(.xl) > .hovered{
+      height:100%;
+      width:100%;  
+};
+
+button.fab:not(.xs):not(.m):not(.l):not(.xl){
+      display:flex;
+      min-width:var(--fab-s-min-width);
+      height:var(--fab-s-height);
+      padding-left:var(--fab-s-leading-space);
+      padding-right:var(--fab-s-trailing-space);
+      gap:var(--fab-s-gap-space);
+      border-radius:var(--fab-s-border-radius);
+      font:var(--font-s);
+}
+
+button.fab:not(.xs):not(.m):not(.l):not(.xl) > .icon{
+      font-size:var(--fab-s-icon-size);
+}
+
+button.fab:not(.xs):not(.m):not(.l):not(.xl) > .decoration{
+      top:0;
+      height:100%;
+}
+
+button.fab.m{
+      display:flex;
+      min-width:var(--fab-m-min-width);
+      height:var(--fab-m-height);
+      padding-left:var(--fab-m-leading-space);
+      padding-right:var(--fab-m-trailing-space);
+      gap:var(--fab-m-gap-space);
+      border-radius:var(--fab-m-border-radius);
+      font:var(--font-m);
+}
+
+button.fab.m > .icon{
+      font-size:var(--fab-m-icon-size);
+}
+
+button.fab.l{
+      display:flex;
+      min-width:var(--fab-l-min-width);
+      height:var(--fab-l-height);
+      padding-left:var(--fab-l-leading-space);
+      padding-right:var(--fab-l-trailing-space);
+      gap:var(--fab-l-gap-space);
+      border-radius:var(--fab-l-border-radius);
+      font:var(--font-l);
+}
+
+button.fab.l > .icon{
+      font-size:var(--fab-m-icon-size);
+}
+
+button.fab.primary > .decoration{
+      background:lch(var(--color-primary));
+}
+
+button.fab.primary:hover > .hovered{
+      background:lch(var(--color-on-primary)/0.08);
+}
+
+button.fab.primary, button.fab.primary > .icon{
+      color:lch(var(--color-on-primary));
+      fill:lch(var(--color-on-primary));
+}
+
+button.fab.primary > .decoration > .pressed{
+      background:lch(var(--color-on-primary)/0.1);
+}
+
+button.fab.secondary > .decoration{
+      background:lch(var(--color-secondary));
+}
+
+button.fab.secondary:hover > .hovered{
+      background:lch(var(--color-on-secondary)/0.08);
+}
+
+button.fab.secondary, button.fab.secondary > .icon{
+      color:lch(var(--color-on-secondary));
+      fill:lch(var(--color-on-secondary));
+}
+
+button.fab.secondary > .decoration > .pressed{
+      background:lch(var(--color-on-secondary)/0.1);
+}
+
+button.fab.tertiary > .decoration{
+      background:lch(var(--color-tertiary));
+}
+
+button.fab.tertiary:hover > .hovered{
+      background:lch(var(--color-on-tertiary)/0.08);
+}
+
+button.fab.tertiary, button.fab.tertiary > .icon{
+      color:lch(var(--color-on-tertiary));
+      fill:lch(var(--color-on-tertiary));
+}
+
+button.fab.tertiary > .decoration > .pressed{
+      background:lch(var(--color-on-tertiary)/0.1);
+}
+
+button.fab.tonal.primary > .decoration{
+      background:lch(var(--color-primary-container));
+}
+
+button.fab.tonal.primary:hover > .hovered{
+      background:lch(var(--color-on-primary-container)/0.08);
+}
+
+button.fab.tonal.primary, button.fab.tonal.primary > .icon{
+      color:lch(var(--color-primary));
+      fill:lch(var(--color-primary));
+}
+
+button.fab.tonal.primary > .decoration > .pressed{
+      background:lch(var(--color-on-primary-container)/0.1);
+}
+
+button.fab.tonal.secondary > .decoration{
+      background:lch(var(--color-secondary-container));
+}
+
+button.fab.tonal.secondary:hover > .hovered{
+      background:lch(var(--color-on-secondary-container)/0.08);
+}
+
+button.fab.tonal.secondary, button.fab.tonal.secondary > .icon{
+      color:lch(var(--color-on-secondary-container));
+      fill:lch(var(--color-on-secondary-container));
+}
+
+button.fab.tonal.secondary > .decoration > .pressed{
+      background:lch(var(--color-on-secondary-container)/0.1);
+}
+
+button.fab.tonal.tertiary > .decoration{
+      background:lch(var(--color-tertiary-container));
+}
+
+button.fab.tonal.tertiary:hover > .hovered{
+      background:lch(var(--color-on-tertiary-container)/0.08);
+}
+
+button.fab.tonal.tertiary, button.fab.tonal.tertiary > .icon{
+      color:lch(var(--color-on-tertiary-container));
+      fill:lch(var(--color-on-tertiary-container));
+}
+
+button.fab.tonal.tertiary > .decoration > .pressed{
+      background:lch(var(--color-on-tertiary-container)/0.1);
+}
+
+hr{
+      height:1px;
+      border:none;
+      background:lch(var(--color-outline-variant));
+      background-clip:content-box;
+      width:100%;
+      padding-left:16px;
+      padding-right:16px;
+      box-sizing:border-box;
+}
+
+html{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+}
+body{
+      width:max-content;
+}
