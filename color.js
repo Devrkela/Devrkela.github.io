@@ -17,7 +17,7 @@ const conic = `conic-gradient(${color.join(",")})`;
   });
   
   function buildPalette(degree){
-    const shift = (degree + 30) % 360;
+    const shift = (degree - 30) % 360;
     
     style.innerHTML = `html{
   --color-primary: 40%  50 ${degree};
@@ -33,18 +33,18 @@ const conic = `conic-gradient(${color.join(",")})`;
   --color-tertiary: 40%  15 ${shift};
   --color-on-tertiary: 100% 15 ${shift};
   --color-tertiary-container: 90%  15 ${shift};
-  --color-on_tertiary_container: 30%  15 ${shift};
+  --color-on-tertiary-container: 30%  15 ${shift};
 
   --color-error: 40%  70   37;
   --color-on-error: 100% 50   37;
   --color-error-container: 90%  10   37;
-  --color-on_error_container: 30%  60   37;
+  --color-on-error-container: 30%  60   37;
 
   --color-surface: 98%  5 ${degree};
   --color-on-surface: 10%  5 ${degree};
   --color-surface-variant: 90%  5 ${degree};
   --color-on-surface-variant: 30%  5 ${degree};
-  --color-surface-container-highest: 90%  5 ${degree};
+  --color-surface-container-highest: 90% 0${degree};
   --color-surface-container-high: 92%  5   ${degree};
   --color-surface-container: 94%  5   ${degree};
   --color-surface-container-low: 96%  5   ${degree};
