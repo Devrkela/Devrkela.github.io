@@ -1,0 +1,165 @@
+html{
+      /**** Icon ****/
+            /*** xs ***/
+            --button-icon-xs-narrow-leading-space: 4px;
+            --button-icon-xs-narrow-trailing-space: 4px;
+            --button-icon-xs-leading-space: 6px;
+            --button-icon-xs-trailing-space: 6px;
+            --button-icon-xs-wide-leading-space: 8px;
+            --button-icon-xs-wide-trailing-space: 8px;
+            --button-icon-xs-icon-size: 20px;
+
+            /*** s ***/
+            --button-icon-s-narrow-leading-space: 4px;
+            --button-icon-s-narrow-trailing-space: 4px;
+            --button-icon-s-leading-space: 8px;
+            --button-icon-s-trailing-space: 8px;
+            --button-icon-s-wide-leading-space: 14px;
+            --button-icon-s-wide-trailing-space: 14px;
+            --button-icon-s-icon-size: 24px;
+
+            /*** m ***/
+            --button-icon-m-narrow-leading-space: 12px;
+            --button-icon-m-narrow-trailing-space: 12px;
+            --button-icon-m-leading-space: 16px;
+            --button-icon-m-trailing-space: 16px;
+            --button-icon-m-wide-leading-space: 24px;
+            --button-icon-m-wide-trailing-space: 24px;
+            --button-icon-m-icon-size: 24px;
+
+            /*** l ***/
+            --button-icon-l-narrow-leading-space: 16px;
+            --button-icon-l-narrow-trailing-space: 16px;
+            --button-icon-l-leading-space: 32px;
+            --button-icon-l-trailing-space: 32px;
+            --button-icon-l-wide-leading-space: 48px;
+            --button-icon-l-wide-trailing-space: 48px;
+            --button-icon-l-icon-size: 32px;
+
+            /*** xl ***/
+            --button-icon-xl-narrow-leading-space: 32px;
+            --button-icon-xl-narrow-trailing-space: 32px;
+            --button-icon-xl-leading-space: 48px;
+            --button-icon-xl-trailing-space: 48px;
+            --button-icon-xl-wide-leading-space: 72px;
+            --button-icon-xl-wide-trailing-space: 72px;
+            --button-icon-xl-icon-size: 40px;
+}
+
+.container{
+      display:flex;
+      gap:16px
+}
+
+button.icon.xs.narrow {
+      padding-left:var(--button-icon-xs-narrow-leading-space);
+      padding-right:var(--button-icon-xs-narrow-trailing-space); 
+}
+
+button.icon.xs {
+      padding-left:var(--button-icon-xs-leading-space);
+      padding-right:var(--button-icon-xs-trailing-space); 
+}
+
+button.icon.xs > .icon {
+      width:var(--button-icon-xs-icon-size);
+      height:var(--button-icon-xs-icon-size);
+      font-size:var(--button-icon-xs-icon-size);
+}
+
+button.icon.xs.wide {
+      padding-left:var(--button-icon-xs-wide-leading-space);
+      padding-right:var(--button-icon-xs-wide-trailing-space); 
+}
+
+button.icon.s.narrow {
+      padding-left:var(--button-icon-s-narrow-leading-space);
+      padding-right:var(--button-icon-s-narrow-trailing-space); 
+}
+
+button.icon.s {
+      padding-left:var(--button-icon-s-leading-space);
+      padding-right:var(--button-icon-s-trailing-space); 
+}
+
+button.icon.s.wide {
+      padding-left:var(--button-icon-s-wide-leading-space);
+      padding-right:var(--button-icon-s-wide-trailing-space); 
+}
+
+button.icon.s > .icon {
+      width:var(--button-icon-s-icon-size);
+      height:var(--button-icon-s-icon-size);
+      font-size:var(--button-icon-s-icon-size);
+}
+
+button.icon.m.narrow {
+      padding-left:var(--button-icon-m-narrow-leading-space);
+      padding-right:var(--button-icon-m-narrow-trailing-space); 
+}
+
+button.icon.m {
+      padding-left:var(--button-icon-m-leading-space);
+      padding-right:var(--button-icon-m-trailing-space); 
+}
+
+button.icon.m.wide {
+      padding-left:var(--button-icon-m-wide-leading-space);
+      padding-right:var(--button-icon-m-wide-trailing-space); 
+}
+
+button.icon.m > .icon {
+      width:var(--button-icon-m-icon-size);
+      height:var(--button-icon-m-icon-size);
+      font-size:var(--button-icon-m-icon-size);
+}
+
+button.icon.l.narrow {
+      padding-left:var(--button-icon-l-narrow-leading-space);
+      padding-right:var(--button-icon-l-narrow-trailing-space); 
+}
+
+button.icon.l {
+      padding-left:var(--button-icon-l-leading-space);
+      padding-right:var(--button-icon-l-trailing-space); 
+}
+
+button.icon.l.wide {
+      padding-left:var(--button-icon-l-wide-leading-space);
+      padding-right:var(--button-icon-l-wide-trailing-space); 
+}
+
+button.icon.l > .icon {
+      width:var(--button-icon-l-icon-size);
+      height:var(--button-icon-l-icon-size);
+      font-size:var(--button-icon-l-icon-size);
+}
+
+button.icon.xl.narrow {
+      padding-left:var(--button-icon-xl-narrow-leading-space);
+      padding-right:var(--button-icon-xl-narrow-trailing-space); 
+}
+
+button.icon.xl {
+      padding-left:var(--button-icon-xl-leading-space);
+      padding-right:var(--button-icon-xl-trailing-space); 
+}
+
+button.icon.xl.wide {
+      padding-left:var(--button-icon-xl-wide-leading-space);
+      padding-right:var(--button-icon-xl-wide-trailing-space); 
+}
+
+button.icon.xl > .icon {
+      width:var(--button-icon-xl-icon-size);
+      height:var(--button-icon-xl-icon-size);
+      font-size:var(--button-icon-xl-icon-size);
+}
+
+button.icon.standard > .icon, button.icon.standard[aria-pressed="false"]:not([aria-disabled="true"]) > .icon, button.icon.standard:not([aria-disabled="true"]) > .icon{
+      color:lch(var(--color-on-surface-variant));
+}
+
+button.icon.standard[aria-pressed="true"]:not([aria-disabled="true"]) > .icon{
+      color:lch(var(--color-primary));
+}

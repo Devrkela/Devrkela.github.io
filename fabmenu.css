@@ -1,0 +1,187 @@
+html{
+      /**** FAB ****/
+            /*** Button ***/
+            --fabmenu-button-height:        56px;
+            --fabmenu-button-width:         56px;
+            --fabmenu-button-icon-size:     20px;
+            --fabmenu-button-border-radius: calc(var(--fabmenu-button-height) / 2);
+            --fabmenu-button-space:          8px;
+
+            --fabmenu-item-font : var(--fabmenu-item-font-weight) var(--fabmenu-item-font-size)/var(--fabmenu-item-line-height) var(--fabmenu-item-font-family);
+            --fabmenu-item-font-family:Inter;
+            --fabmenu-item-font-weight:500;
+            --fabmenu-item-font-size:16px;
+            --fabmenu-item-line-height:24px;
+            --fabmenu-item-font-tracking:0.15px;
+
+            --fabmenu-item-height:56px;
+            --fabmenu-item-icon-size:24px;
+            --fabmenu-item-border-radius:calc(var(--fabmenu-item-height) / 2);
+            --fabmenu-item-leading-space:24px;
+            --fabmenu-item-gap:8px;
+            --fabmenu-item-trailing-space:24px;
+            --fabmenu-space:8px;
+
+}
+
+.fabmenu{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+}
+
+.fabmenu > button[aria-haspopup="menu"]{
+      height: var(--fabmenu-button-height);
+      width:  var(--fabmenu-button-width);
+      border-radius:var(--fabmenu-button-border-radius);
+      margin-top:var(--fabmenu-button-space);
+
+      box-shadow:var(--shadow-elevation-3);
+}
+
+.fabmenu > button[aria-haspopup="menu"]:hover{
+      box-shadow:var(--shadow-elevation-4);      
+}
+
+.fabmenu > button[aria-haspopup="menu"] > .icon{
+      height: var(--fabmenu-button-icon-size);
+      width: var(--fabmenu-button-icon-size);
+      font-size: var(--fabmenu-button-icon-size);
+}
+
+.fabmenu > [role="menu"]{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+}
+
+.fabmenu > [role="menu"] > button[role="menuitem"]{
+      font:var(--fabmenu-item-font);
+      letter-spacing:var(--fabmenu-item-font-tracking);
+      box-sizing:border-box;
+      
+      height: var(--fabmenu-item-height);
+      gap:var(--fabmenu-item-gap);
+
+      padding-left:var(--fabmenu-item-leading-space);
+      padding-right:var(--fabmenu-item-trailing-space);
+
+      border-radius:var(--fabmenu-item-border-radius);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+}
+
+.fabmenu > [role="menu"] > button[role="menuitem"]:hover{
+      box-shadow:var(--shadow-elevation-4);
+}
+
+.fabmenu > [role="menu"] > button[role="menuitem"] > .icon{
+      height:var(--fabmenu-item-icon-size);      
+      width:var(--fabmenu-item-icon-size);      
+      font-size:var(--fabmenu-item-icon-size);      
+}
+
+.fabmenu > [role="menu"] > button[role="menuitem"]:not(:last-of-type){
+      margin-bottom:var(--fabmenu-space);
+}
+
+.fabmenu.primary > button[aria-haspopup="menu"] > .decoration{
+      background:lch(var(--color-primary));
+}
+
+.fabmenu.primary > button[aria-haspopup="menu"] > .icon{
+      color:lch(var(--color-on-primary));
+}
+
+.fabmenu.primary > button[aria-haspopup="menu"]:hover > .hovered{
+      background:lch(var(--color-on-primary)/0.08);
+}
+
+.fabmenu.primary > button[aria-haspopup="menu"] > .decoration > .pressed{
+      background:lch(var(--color-on-primary)/0.1);
+}
+
+.fabmenu.primary > [role="menu"] > button[role="menuitem"] > .decoration{
+      background:lch(var(--color-primary-container));
+}
+
+.fabmenu.primary > [role="menu"] > button[role="menuitem"] > .decoration > .pressed{
+      background:lch(var(--color-on-primary-container)/0.1);
+}
+
+.fabmenu.primary > [role="menu"] > button[role="menuitem"]:hover > .hovered{
+      background:lch(var(--color-on-primary-container)/0.1);      
+}
+
+.fabmenu.primary > [role="menu"] > button[role="menuitem"], .fabmenu.primary > [role="menu"] > [role="menuitem"] > .icon{
+      color:lch(var(--color-on-primary-container));
+      fill:lch(var(--color-on-primary-container));
+}
+
+.fabmenu.secondary > button[aria-haspopup="menu"] > .decoration{
+      background:lch(var(--color-secondary));
+}
+
+.fabmenu.secondary > button[aria-haspopup="menu"] > .icon{
+      color:lch(var(--color-on-secondary));
+}
+
+.fabmenu.secondary > button[aria-haspopup="menu"]:hover > .hovered{
+      background:lch(var(--color-on-secondary)/0.08);
+}
+
+.fabmenu.secondary > button[aria-haspopup="menu"] > .decoration > .pressed{
+      background:lch(var(--color-on-secondary)/0.1);
+}
+
+.fabmenu.secondary > [role="menu"] > button[role="menuitem"] > .decoration{
+      background:lch(var(--color-secondary-container));
+}
+
+.fabmenu.secondary > [role="menu"] > button[role="menuitem"] > .decoration > .pressed{
+      background:lch(var(--color-on-secondary-container)/0.1);
+}
+
+.fabmenu.secondary > [role="menu"] > button[role="menuitem"]:hover > .hovered{
+      background:lch(var(--color-on-secondary-container)/0.1);      
+}
+
+.fabmenu.secondary > [role="menu"] > button[role="menuitem"], .fabmenu.secondary > [role="menu"] > [role="menuitem"] > .icon{
+      color:lch(var(--color-on-secondary-container));
+      fill:lch(var(--color-on-secondary-container));
+}
+
+.fabmenu.tertiary > button[aria-haspopup="menu"] > .decoration{
+      background:lch(var(--color-tertiary));
+}
+
+.fabmenu.tertiary > button[aria-haspopup="menu"] > .icon{
+      color:lch(var(--color-on-tertiary));
+}
+
+.fabmenu.tertiary > button[aria-haspopup="menu"]:hover > .hovered{
+      background:lch(var(--color-on-tertiary)/0.08);
+}
+
+.fabmenu.tertiary > button[aria-haspopup="menu"] > .decoration > .pressed{
+      background:lch(var(--color-on-tertiary)/0.1);
+}
+
+.fabmenu.tertiary > [role="menu"] > button[role="menuitem"] > .decoration{
+      background:lch(var(--color-tertiary-container));
+}
+
+.fabmenu.tertiary > [role="menu"] > button[role="menuitem"] > .decoration > .pressed{
+      background:lch(var(--color-on-tertiary-container)/0.1);
+}
+
+.fabmenu.tertiary > [role="menu"] > button[role="menuitem"]:hover > .hovered{
+      background:lch(var(--color-on-tertiary-container)/0.1);      
+}
+
+.fabmenu.tertiary > [role="menu"] > button[role="menuitem"], .fabmenu.tertiary > [role="menu"] > [role="menuitem"] > .icon{
+      color:lch(var(--color-on-tertiary-container));
+      fill:lch(var(--color-on-tertiary-container));
+}

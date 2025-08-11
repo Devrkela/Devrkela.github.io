@@ -1,0 +1,121 @@
+html{
+      /**** Segmented ****/
+            /*** Container ***/
+            --button-segmented-container-border-width: 1px;
+            --button-segmented-container-height: 40px;    
+            --button-segmented-container-gap: 8px;    
+            --button-segmented-container-icon-size: 18px;
+            --button-segmented-container-padding-compensate: calc(var(--button-segmented-container-icon-size) / 2);
+            --button-segmented-container-top: 4px;    
+            --button-segmented-container-border-radius: calc(var(--button-segmented-container-height) / 2);
+}
+
+.segmented{
+      display:flex;
+}
+
+.segmented > button{
+      min-height:48px;
+      padding-left:16px;
+      padding-right:16px;
+      gap:var(--button-segmented-container-gap);
+      font:var(--font-label-large);
+      letter-spacing:var(  --font-label-large-tracking)
+}
+
+.segmented > button[aria-disabled="true"] > .decoration{
+      background:none !important;
+      border-color:lch(var(--color-on-surface)/0.12) !important;
+}
+
+.segmented > button[aria-disabled="true"], .segmented > button[aria-disabled="true"] > .icon{
+      color:lch(var(--color-on-surface)/0.38) !important;
+      fill:lch(var(--color-on-surface)/0.38) !important;
+}
+
+.segmented > button:first-of-type{
+      padding-left:calc(16px + var(--button-segmented-container-border-radius) / 2);      
+}
+
+.segmented > button:last-of-type{
+      padding-right:calc(16px + var(--button-segmented-container-border-radius) / 2);      
+}
+
+.segmented > button > .icon{
+      width:var(--button-segmented-container-icon-size);
+      height:var(--button-segmented-container-icon-size);
+      font-size:var(--button-segmented-container-icon-size);
+}
+
+.segmented > button[aria-selected="true"] > .decoration, .segmented > button[aria-checked="true"] > .decoration{
+      background:lch(var(--color-secondary-container));
+}
+
+.segmented > button[aria-selected="true"], .segmented > button[aria-selected="true"] > .icon, .segmented > button[aria-checked="true"], .segmented > button[aria-checked="true"] > .icon{
+      color:lch(var(--color-on-secondary-container));
+}
+
+.segmented > button[aria-selected="false"] > .icon, .segmented > button[aria-checked="false"] > .icon{
+      display:none;
+}
+
+.segmented > button[aria-selected="false"]:first-of-type, .segmented > button[aria-checked="false"]:first-of-type{
+      padding-left:calc(16px + var(--button-segmented-container-padding-compensate) + var(--button-segmented-container-border-radius) / 2  + var(--button-segmented-container-gap) / 2);      
+}
+
+.segmented > button[aria-selected="false"]:last-of-type, .segmented > button[aria-checked="false"]:last-of-type{
+      padding-right:calc(16px + var(--button-segmented-container-padding-compensate) + var(--button-segmented-container-border-radius) / 2  + var(--button-segmented-container-gap) / 2);      
+}
+
+.segmented > button[aria-selected="false"], .segmented > button[aria-checked="false"]{
+      padding-left:calc(16px + var(--button-segmented-container-padding-compensate)  + var(--button-segmented-container-gap) / 2);
+      padding-right:calc(16px + var(--button-segmented-container-padding-compensate)  + var(--button-segmented-container-gap) / 2);
+}
+
+.segmented > button[aria-selected="false"], .segmented > button[aria-selected="false"] > .icon, .segmented > button[aria-checked="false"], .segmented > button[aria-checked="false"] > .icon{
+      color:lch(var(--color-on-surface));
+}
+
+.segmented > button[aria-selected="false"]:hover  > .hovered{
+      background:lch(var(--color-on-surface)/0.08); 
+}
+
+.segmented > button[aria-selected="false"]  > .decoration > .pressed{
+      background:lch(var(--color-on-surface)/0.1); 
+}
+
+.segmented > button[aria-selected="true"]:hover  > .hovered{
+      background:lch(var(--color-on-secondary-container)/0.1); 
+}
+
+.segmented > button[aria-selected="true"] > .decoration > .pressed{
+      background:lch(var(--color-on-secondary-container)/0.1); 
+}
+
+.segmented > button > .decoration{
+      border-width:var(--button-segmented-container-border-width);
+      border-style:solid;
+      border-color:lch(var(--color-outline));
+      top:var(--button-segmented-container-top);
+      height:var(--button-segmented-container-height)
+}
+
+.segmented > button > .decoration, .segmented > button > .hovered{
+      top:var(--button-segmented-container-top);
+      height:var(--button-segmented-container-height)
+}
+
+.segmented > button:first-of-type > .decoration, .segmented > button:first-of-type > .hovered{
+      border-top-left-radius:var(--button-segmented-container-border-radius);      
+      border-bottom-left-radius:var(--button-segmented-container-border-radius);
+}
+
+.segmented > button:not(:first-of-type):not(:last-of-type){
+      margin-left:calc(-1 * var(--button-segmented-container-border-width));
+      margin-right:calc(-1 * var(--button-segmented-container-border-width));
+}
+
+.segmented > button:last-of-type > .decoration, .segmented > button:last-of-type > .hovered{
+      border-top-right-radius:var(--button-segmented-container-border-radius);      
+      border-bottom-right-radius:var(--button-segmented-container-border-radius);
+}

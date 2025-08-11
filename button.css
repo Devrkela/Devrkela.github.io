@@ -68,10 +68,9 @@ button{
       align-items:center;
       width:max-content;
       cursor:pointer;
-      position:relative;
-      box-sizing:border-box;
-      z-index:1;
       background:none;
+      position:relative;
+
       border:none;
       padding-top:0;
       padding-bottom:0;
@@ -122,8 +121,8 @@ button.xs{
       height:var(--button-minimum-height);
       gap:var(--button-xs-gap);
       border-radius:var(--button-xs-square);
-      
       font:var(--font-body-medium);
+      font-variation-settings: "opsz" 14;
       letter-spacing:var(--font-body-medium-letter-spacing);
       font-weight:var(--font-emphasize-font-weight);
 }
@@ -131,6 +130,7 @@ button.xs{
 button.xs > .icon{
       width:var(--button-xs-icon-size);
       font-size:var(--button-xs-icon-size);
+      font-variation-settings:"opsz" 20, "FILL" 0!important;
 }
 
 button.xs > .decoration, button.xs > .hovered{
@@ -141,8 +141,7 @@ button.xs > .decoration, button.xs > .hovered{
       left:0;
       position:absolute;
       z-index:-1;
-
-      height:var(--button-xs-height);  
+      height:var(--button-xs-height);
 }
 
 button.xs.round{
@@ -150,24 +149,23 @@ button.xs.round{
 }
 
 
-button:not(.xs):not(.m):not(.l):not(.xl){
+button.s{
       border-width:1px;
       padding-left:var(--button-s-padding);
       padding-right:var(--button-s-padding);
       height:var(--button-minimum-height);
       gap:var(--button-s-gap);
       border-radius:var(--button-s-square);
-
       font:var(--font-body-medium);
       letter-spacing:var(--font-body-medium-letter-spacing);
       font-weight:var(--font-emphasize-font-weight);
 }
-button:not(.xs):not(.m):not(.l):not(.xl) > .icon{
+button.s > .icon{
       width:var(--button-s-icon-size);
       font-size:var(--button-s-icon-size);
 }
 
-button:not(.xs):not(.m):not(.l):not(.xl) > .decoration, button:not(.xs):not(.m):not(.l):not(.xl) > .hovered{
+button.s > .decoration, button.s > .hovered{
       content:"";
       width:100%;
       top:4px;
@@ -177,7 +175,7 @@ button:not(.xs):not(.m):not(.l):not(.xl) > .decoration, button:not(.xs):not(.m):
       height:var(--button-s-height);
 }
 
-button.round:not(.xs):not(.m):not(.l):not(.xl){
+button.round.s{
       border-radius:var(--button-s-round);    
 }
 
@@ -188,7 +186,6 @@ button.m{
       height:var(--button-m-height);
       border-radius:var(--button-m-square);
       gap:var(--button-m-gap);
-
       font:var(--font-body-large);
       letter-spacing:var(--font-body-large-letter-spacing);
       font-weight:var(--font-emphasize-font-weight);
@@ -231,13 +228,14 @@ button.xl{
       border-radius:var(--button-xl-square);
       gap:var(--button-xl-gap);
 
-      font:var(--font-headline-large );
+      font:var(--font-headline-large);
       letter-spacing:var(--font-headline-large-letter-spacing);
 }
 
 button.xl > .icon{
       width:var(--button-xl-icon-size);
-      font-size:var(--button-xl-icon-size);   
+      font-size:var(--button-xl-icon-size);
+      font-weight:var(--font-headline-large-font-weight);
 }
 
 button.xl.round{
@@ -257,6 +255,22 @@ button, button > .decoration{
             button > .icon{
                   color:lch(var(--color-primary));
                   fill: lch(var(--color-primary));
+            }
+
+            button > .icon.fill{
+                  font-variation-settings: "FILL" 1;                    
+            }
+
+            button > .icon.fill_toggle{
+                  font-variation-settings: "FILL" 1 !important;                    
+            }
+
+            button[aria-pressed="false"] > .icon{
+                  font-variation-settings: "FILL" 0;           
+            }
+
+            button[aria-pressed="true"] > .icon{
+                  font-variation-settings: "FILL" 1;           
             }
 
             button  > .decoration > .pressed{
@@ -284,7 +298,7 @@ button, button > .decoration{
 
             /** Pressed State **/
             button  > .decoration > .pressed{
-                  background: lch(58 3.5 105.58 / 0.96);
+                  background: lch(var(--color-on-surface-variant)/0.1);
             }
 
       /** Elevated **/
@@ -608,5 +622,18 @@ button, button > .decoration{
 
 #change_color{
       position:fixed;
-      left:0;
+      left:20;
+      z-index:1000;
+      bottom:20;
+}
+
+hr{
+      height:1px;
+      border:none;
+      background:lch(var(--color-outline-variant));
+      background-clip:content-box;
+      width:100%;
+      padding-left:16px;
+      padding-right:16px;
+      box-sizing:border-box;
 }

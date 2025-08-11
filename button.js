@@ -6,7 +6,7 @@ for(let button of document.querySelectorAll("button")){
   pressed_element.style.height = 2 * dimension.width + dimension.height;      
 
   button.addEventListener("pointerdown" , function pressed(event){
-        const dimension = this.querySelector(".decoration").getBoundingClientRect();
+    const dimension = this.querySelector(".decoration").getBoundingClientRect();
 
     const percent_x = event.clientX - dimension.x - pressed_element.clientWidth/2;
     const percent_y = event.clientY - dimension.y - pressed_element.clientHeight/2;
@@ -24,7 +24,19 @@ for(let button of document.querySelectorAll("button")){
       pressed_element.style.transform = "scale(1)";
       pressed_element.style.opacity = 0;
     }
-
-    this.blur();
   });
+}
+
+for(let button of document.querySelectorAll("button")){
+  button.addEventListener("pointerdown", function(){
+    if(this.hasAttribute("aria-pressed")){
+      if(this.getAttribute("aria-pressed") === "true") return this.setAttribute("aria-pressed", "false");
+      return this.setAttribute("aria-pressed", "true");      
+    }
+
+    if(this.hasAttribute("aria-selected")){
+      if(this.getAttribute("aria-selected") === "true") return this.setAttribute("aria-selected", "false");
+      return this.setAttribute("aria-selected", "true");      
+    }
+  })
 }

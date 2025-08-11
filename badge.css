@@ -1,0 +1,50 @@
+html{
+      --badge-small-size:6px;
+      --badge-small-border-radius:calc(var(--badge-small-size) / 2);
+      --badge-small-top:6px;
+      --badge-small-right:6px;
+
+      --badge-large-size:16px;
+      --badge-large-max-width:32px;
+      --badge-large-border-radius:calc(var(--badge-large-size) / 2);
+      --badge-large-padding:4px;
+      --badge-large-top:14px;
+      --badge-large-right:12px;
+
+}
+*{
+      position:relative;
+}
+.badge{
+      width:var(--badge-small-size);
+      height:var(--badge-small-size);
+      border-radius:var(--badge-small-border-radius);
+      background:lch(var(--color-error));
+      color:lch(var(--color-on-error));
+}
+
+button .badge{
+      transform:translateX(100%) translateY(-100%);
+      position:absolute;
+      top:var(--badge-small-top);
+      right:var(--badge-small-right);
+      pointer-events:none;
+}
+
+.badge.large{
+      height:var(--badge-large-size);
+      min-width:var(--badge-large-size);
+      width:max-content;
+      max-width:var(--badge-large-max-width);
+
+      border-radius:var(--badge-large-border-radius);
+      font:var(--font-label-small);
+
+      padding:0 var(--badge-large-padding);
+}
+
+button .badge.large{
+
+      top:var(--badge-large-top);
+      right:var(--badge-large-right);
+}
