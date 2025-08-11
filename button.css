@@ -130,7 +130,6 @@ button.xs{
 button.xs > .icon{
       width:var(--button-xs-icon-size);
       font-size:var(--button-xs-icon-size);
-      font-variation-settings:"opsz" 20, "FILL" 0!important;
 }
 
 button.xs > .decoration, button.xs > .hovered{
