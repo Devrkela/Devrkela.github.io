@@ -1,0 +1,103 @@
+html{
+      --carousel-gap:8px;
+      --carousel-border-radius:28px;
+      --carousel-padding-top:8px;
+      --carousel-padding-bottom:8px;
+      --carousel-padding-leading:16px;
+      --carousel-padding-trailing:16px;
+      --carousel-border: 1px solid lch(var(--color-outline));
+}
+
+img{
+}
+
+picture > img{
+      object-fit:cover;
+}
+
+.nico{
+      object-position:50% 50%;
+}
+
+.zoro{
+      object-position:55% 50%;      
+}
+
+.carousel{
+      display:flex;
+      gap:var(--carousel-gap);
+      padding:var(--carousel-padding-leading) var(--carousel-padding-top) var(--carousel-padding-trailing) var(--carousel-padding-bottom);
+
+}
+
+.carousel > picture{
+      cursor:pointer;
+      position:relative;
+      border-radius:var(--carousel-border-radius);
+      border:var(--carousel-border);
+      overflow:hidden;
+      box-shadow:var(--shadow-elevation-0);
+}
+
+.carousel > picture > img{
+      height:inherit;
+      width:inherit;
+      box-sizing:border-box;
+      border-radius:inherit;
+      display:block;
+
+      background:lch(var(--color-surface));
+}
+
+.carousel > picture.large{
+      width:200px;
+      height:200px;
+}
+
+.carousel > picture.small{
+      min-width:40px;
+      max-width:52px;
+      width:8vw;
+      height:200px;
+}
+
+.carousel:hover{
+      box-shadow:var(--shadow-elevation-1);
+}
+
+.carousel > picture:hover > .hovered{
+      background:lch(var(--color-on-surface)/0.08);
+}
+
+.carousel > picture > .hovered, .carousel > picture > .decoration{
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      border-radius:inherit;
+      z-index:0;
+}
+
+.carousel > picture > .decoration{
+      z-index:0;
+}
+
+.carousel > picture > .decoration > .pressed{
+      position:absolute;
+      filter:blur(1px);
+      display:flex;
+      transform:scale(0);
+      transform-origin:center center;
+      opacity:1;
+      transition:
+            transform 500ms ease,
+            opacity 250ms 250ms ease;
+      pointer-events:none;
+      border-radius:50%;
+      background:lch(var(--color-on-surface)/0.1);
+}
+
+.carousel:has(> picture:active){
+      box-shadow:var(--shadow-elevation-0);
+}
