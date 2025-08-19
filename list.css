@@ -1,0 +1,151 @@
+html{
+      --list-label-alignment:center;
+      --list-large-label-alignment:top;
+      --list-label-left-padding:16px;
+      --list-leading-element-alignment:center;
+      --list-large-leading-element-alignment:top;
+      --list-leading-element-left-padding:16px;
+      --list-leading-icon-alignment:top;
+      --list-leading-icon-top-padding:8px;
+      --list-large-leading-icon-top-padding:12px;
+      --list-trailing-element-alignment:center;
+      --list-large-trailing-element-alignment:top;
+      --list-trailing-element-left-padding:16px;
+      --list-trailing-element-right-padding:24px;
+      --list-padding-above-below-divider:0dp;
+      --list-targets:48px;
+      --list-divider-full-width:100%;
+      --list-divider-inset-left-padding:16px
+      --list-divider-inset-right-padding:24px;
+}
+
+ul,li{
+      margin:0;
+      padding:0;
+}
+
+.list > .item{
+      width:420px;
+      max-width:80vw;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+
+      padding-top:var(--list-leading-icon-top-padding);
+      padding-bottom:var(--list-leading-icon-top-padding);
+
+      cursor:pointer;
+
+      position:relative;
+}
+
+.list > .item > .leading, .list > .item > .trailing{
+      align-self:center;
+}
+
+.list > .item > .leading{
+      padding-left:var(--list-leading-element-left-padding);
+}
+
+.list > .item > .leading > .icon{
+      color:lch(var(--color-on-surface-variant));
+}
+
+.list > .item[aria-checked="true"] > .leading > .icon, .list > .item[aria-selected="true"] > .leading > .icon{
+      color:lch(var(--color-on-surface));
+}
+
+.list > .item > .label{
+      padding-left:var(--list-label-left-padding);
+}
+
+.list > .item > .label > h2{
+      font:var(--font-body-large);
+      letter-spacing:var(--font-body-large-tracking);
+      color:lch(var(--color-on-surface));
+}
+
+.list > .item > .label > p{
+      font:var(--font-body-medium);
+      letter-spacing:var(--font-body-medium-tracking);
+      color:lch(var(--color-on-surface-variant));
+}
+
+.list > .item .checkbox{
+      pointer-events:none;
+}
+
+.list > .item > .trailing{
+      padding-left:var(--list-trailing-element-left-padding);
+      padding-right:var(--list-trailing-element-right-padding);
+
+}
+
+.list > .item > *{
+      z-index:1;
+}
+
+.list > .item > .decoration, .list > .item > .hovered{
+      position:absolute;
+      width:100%;
+      height:100%;
+
+      z-index:0;
+      border-radius:inherit;
+}
+
+.list > .item > .decoration{
+      overflow:hidden;
+}
+
+.list > .item > .decoration{
+      background:lch(var(--color-surface));
+}
+
+.list > .item > .decoration > .pressed{
+      position:absolute;
+      filter:blur(1px);
+      display:flex;
+      transform:scale(0);
+      transform-origin:center center;
+      opacity:1;
+      transition:
+            transform 1000ms ease,
+            opacity 1000ms ease;
+      pointer-events:none;
+      border-radius:50%;
+      background:lch(var(--color-on-surface)/0.1);
+}
+
+.list > .item[aria-checked="true"] > .leading > .icon, .list > .item[aria-selected="true"] > .leading > .icon{
+      color:lch(var(--color-on-surface));
+      fill:lch(var(--color-on-surface));
+}
+
+.list > .item[aria-checked="true"] > .decoration, .list > .item[aria-selected="true"] > .decoration{
+      background:lch(var(--color-secondary-container));
+}
+
+.list > .item[aria-checked="true"] > .label > h2, .list > .item[aria-selected="true"] > .label > h2{
+      color:lch(var(--color-on-secondary-container));
+}
+
+.list > .item[aria-checked="true"] > .label > p, .list > .item[aria-selected="true"] > .label > p{
+      color:lch(var(--color-on-surface));
+}
+
+.list > .item[aria-checked="false"]:hover > .hovered{
+      background:lch(var(--color-on-surface)/0.08);
+}
+
+.list > .item[aria-checked="true"]:hover > .hovered{
+      background:lch(var(--color-on-surface)/0.08);
+}
+
+.list > .item[aria-checked="false"] > .decoration > .pressed{
+      background:lch(var(--color-on-surface)/0.1);
+}
+
+.list > .item[aria-checked="true"] > .decoration > .pressed{
+      background:lch(var(--color-on-surface)/0.1);
+}

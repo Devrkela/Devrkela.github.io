@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="/composants/general.css" rel="stylesheet">
+    <link href="/composants/shadow.css" rel="stylesheet">
+    <link href="/composants/motion.css" rel="stylesheet">
+
+    <link href="./checkbox.css" rel="stylesheet">
+    <link href="./list.css" rel="stylesheet">
+    <link href="./button.css" rel="stylesheet">
+    <link href="./icon.css" rel="stylesheet">
+  </head>
+  <body>
+    <ul class="list" role="listbox" aria-checked="false">
+      <li class="item" role="option" aria-checked="false">
+      <div aria-hidden="true" class="decoration">
+        <div aria-hidden="true" class="pressed"></div>
+      </div>
+      <div aria-hidden="true" class="hovered"></div>
+        <div class="leading">
+          <span class="icon material-symbols-rounded">
+            account_circle
+          </span>          
+        </div>
+        <div class="label">
+          <h2>Headline</h2>
+          <p>Supporting text that is long enough to fill up multiples lines</p>
+        </div>
+        <div class="trailing">
+          <div class="checkbox" role="checkbox" aria-checked="false">
+            <div aria-hidden="true" class="decoration">
+              <div aria-hidden="true" class="pressed"></div>
+            </div>
+            <div aria-hidden="true" class="hovered"></div>
+            <div class="container">
+              <span class="icon material-symbols-rounded">
+                check
+              </span>       
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item" role="option" aria-checked="true">
+      <div aria-hidden="true" class="decoration">
+        <div aria-hidden="true" class="pressed"></div>
+      </div>
+      <div aria-hidden="true" class="hovered"></div>
+        <div class="leading">
+          <span class="icon material-symbols-rounded">
+            account_circle
+          </span>          
+        </div>
+        <div class="label">
+          <h2>Headline</h2>
+          <p>Supporting text that is long enough to fill up multiples lines</p>
+        </div>
+        <div class="trailing">
+          <div class="checkbox" role="checkbox" aria-checked="true">
+            <div aria-hidden="true" class="decoration">
+              <div aria-hidden="true" class="pressed"></div>
+            </div>
+            <div aria-hidden="true" class="hovered"></div>
+            <div class="container">
+              <span class="icon material-symbols-rounded">
+                check
+              </span>       
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <input id="change_color" type="range" min="0" max="360" step="1" value="100"/>
+    <script src="./color.js"></script>
+    <script src="./button.js"></script>
+    <script src="./checkbox.js"></script>
+    <script src="./list.js"></script>
+  </body>
+</html>

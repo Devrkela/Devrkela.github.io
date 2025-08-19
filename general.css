@@ -3,7 +3,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  justify-content: center;
   align-items: center;
+  overflow: overlay;
+  width: 100%;
+  min-height: 100%;
+  height: max-content;
 }
 
 #color_wheel {
@@ -23,8 +28,8 @@ body {
 
 /**** Typography ****/
 html {
-  --outline-width:1px;
-  --outline-style:solid;
+  --outline-width: 1px;
+  --outline-style: solid;
   /*** Normal ***/
   /** Display large **/
   --font-display-large : var(--font-display-large-font-weight) var(--font-display-large-font-size)/var(--font-display-large-line-height) var(--font-display-large-font-family);
